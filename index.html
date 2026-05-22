@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Street Drop · Camisetas urbanas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="loja site - Copia/site-estatico/css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-layer" aria-hidden="true">
+      <img
+        class="bg-layer__img"
+        src="loja site - Copia/site-estatico/images/bg-loja.png"
+        alt=""
+        width="1024"
+        height="576"
+        decoding="async"
+      />
+    </div>
+    <header class="header">
+      <div class="header__inner">
+        <div class="brand">
+          <span class="brand__title">Street Drop</span>
+          <span class="brand__tag">camisetas · vibe urbana</span>
+        </div>
+        <nav class="nav">
+          <a href="#inicio" class="nav__link">Início</a>
+          <a href="#colecoes" class="nav__link">Coleções</a>
+          <a href="#em-breve" class="nav__link">Em breve</a>
+          <a href="#contato" class="nav__link">Contato</a>
+          <a href="#sobre-nos" class="nav__link">Sobre nós</a>
+        </nav>
+        <div class="header-cart">
+          <button type="button" class="btn-cart" id="btn-open-cart" aria-label="Abrir carrinho">
+            <span aria-hidden="true">🛒</span>
+            <span class="btn-cart__badge" id="cart-badge" hidden>0</span>
+          </button>
+          <span class="btn-cart__caption">Carrinho</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero" id="inicio">
+        <p class="hero__eyebrow">novo drop</p>
+        <h1 class="hero__title">Camisetas street</h1>
+        <p class="hero__text">
+          Loja focada no público jovem, com estampas urbanas e descoladas. As camisetas são de alta qualidade,
+          com tecidos confortáveis e duráveis, perfeitas para quem quer expressar seu estilo nas ruas.
+        </p>
+      </section>
+
+      <section class="collections" id="colecoes">
+        <h2 class="collections__title">COLEÇÕES</h2>
+        <div class="collection">
+          <h3 class="collection__name">NATURE OVER</h3>
+          <ul class="grid" id="product-grid">
+            <!-- cards gerados por JS -->
+          </ul>
+        </div>
+        <div class="collection collection--secondary" id="winter-tide">
+          <h3 class="collection__name">WINTER-TIDE</h3>
+          <p class="collection__description">Coleção de moletom de inverno com estilo urbano e aconchegante. Em breve teremos peças novas para aquecer suas ruas.</p>
+          <ul class="grid" id="product-grid-winter-tide">
+            <!-- cards gerados por JS para Winter-Tide -->
+          </ul>
+        </div>
+      </section>
+
+      <section class="coming-soon" id="em-breve">
+        <h2>Em breve</h2>
+        <p>Novas coleções chegando em breve. Fique ligado!</p>
+      </section>
+
+      <section class="contact" id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para dúvidas ou pedidos especiais.</p>
+        <p>E-mail: contato@streetdrop.com</p>
+      </section>
+
+      <section class="about" id="sobre-nos">
+        <div class="about__content">
+          <h2>Sobre nós</h2>
+          <p>Street Drop nasceu da ideia de traduzir atitude urbana em camisetas exclusivas. A gente acredita que roupa é fala, mensagem e atitude.</p>
+          <p>Desde o início, nosso foco é criar estampas autorais com referências de arte de rua, cultura jovem e estilo confortável.</p>
+          <ul class="about__list">
+            <li>Peças pensadas para quem vive a cidade e quer se destacar.</li>
+            <li>Materiais confortáveis, corte moderno e acabamento caprichado.</li>
+            <li>Produção consciente com atenção ao menor desperdício.</li>
+          </ul>
+          <p>Essa é a primeira coleção, mas já estamos preparando mais lançamentos e novas histórias para a marca.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Carrinho lateral -->
+    <div class="cart-backdrop" id="cart-backdrop" hidden aria-hidden="true"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-heading" role="dialog" aria-modal="true" hidden>
+      <div class="cart-drawer__head">
+        <h2 id="cart-heading" class="cart-drawer__title">Carrinho</h2>
+        <button type="button" class="cart-drawer__close" id="btn-close-cart" aria-label="Fechar carrinho">✕</button>
+      </div>
+      <div class="cart-drawer__body" id="cart-lines"></div>
+      <div class="cart-drawer__foot">
+        <p class="cart-drawer__error" id="checkout-msg" hidden></p>
+        <div class="cart-drawer__subtotal">
+          <span>Subtotal</span>
+          <strong id="cart-subtotal">R$ 0,00</strong>
+        </div>
+        <div class="cart-drawer__actions">
+          <button type="button" class="btn btn--ghost" id="btn-clear-cart">Limpar</button>
+          <button type="button" class="btn btn--primary" id="btn-checkout">Finalizar pedido</button>
+        </div>
+        <p class="cart-drawer__hint">
+          Enviaremos seu pedido direto para o WhatsApp quando finalizar.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="loja site - Copia/site-estatico/js/app.js" defer></script>
+  </body>
+</html>

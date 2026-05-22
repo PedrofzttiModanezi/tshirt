@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --bg-deep: #060b14;
+  --card: #101a2e;
+  --navy: #1e3a5f;
+  --sky: #38bdf8;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: #f8fafc;
+}
+
+/* grade listrada sutil — vibe street */
+.bg-stripe {
+  background-image: repeating-linear-gradient(
+    -12deg,
+    transparent,
+    transparent 12px,
+    rgba(56, 189, 248, 0.03) 12px,
+    rgba(56, 189, 248, 0.03) 13px
+  );
+}
+
+@keyframes toast-pop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.toast-pop {
+  animation: toast-pop 0.28s ease-out both;
+}
